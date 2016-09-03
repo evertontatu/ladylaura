@@ -1,0 +1,151 @@
+//HEADER
+  .home{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: column;
+    background-color: $amareloBrand;
+    background-attachment: fixed;
+  }
+
+  .logoMenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    transition: 300ms ease-in-out all;
+  }
+
+  .menu{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 888;
+    width: 100%;
+    transition: 300ms ease-in-out all;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    justify-content: space-between;
+    -ms-justify-content: space-between;
+  }
+
+  .menuBG{
+    background-color: rgba(32, 50, 100, 0.9);
+  }
+
+  .menuHeigth{
+    height: 70px;
+  }
+
+  .logo-evertonboni{
+    width:230px;
+    margin: 0 auto;
+    margin: 10px;
+  }
+
+  nav{
+    margin: 10px;
+    z-index: 999;
+    transition: 300ms ease-in-out all;
+  }
+
+  nav ul li{
+    display:inline-block;
+    margin: 0 3px;
+  }
+
+  nav ul li a{
+    color:white;
+    font-family: "nexaLight";
+    font-size: 1.6em;
+    text-transform: uppercase;
+    transition: 100ms ease-in-out all;
+    padding: 5px 1px;
+    margin: 0 10px;
+    border-bottom: 0 solid $laranjaBrand;
+
+    &:hover{
+      color:white;
+      border-bottom: 3px solid $laranjaBrand;
+    }
+  }
+
+  .menu-mobile{
+    display:none;
+  }
+
+  .homeCenter{
+    height: 260px;
+    width: 700px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -350px;
+    margin-top: -130px;
+
+    text-align: center;
+    .face-to-face{
+      width:70px;
+      margin-bottom: 30px;
+    }
+    h1{
+
+      line-height: 1.8em;
+    }
+  }
+
+  //BREAKPOINT
+
+  @media screen and (min-width: 319px) and (max-width: 719px){
+    .logo-evertonboni{ width: 200px; margin-left:10px;}
+    nav{display: none; background-color: $azulBrand; width: 100%; margin: 0;}
+    nav ul{width:100%;}
+    nav ul li{margin: 0; justify-content: center; background-color: $brand-color; width: 100%;}
+    nav ul li a{
+      width: 100%;
+      display: block;
+      text-align: center;
+      padding: 30px;
+      margin: 0;
+      &:hover{
+        border-bottom: none;
+        background-color: lighten($azulBrand, 4);
+      }
+      &:hover:nav ul li{
+        background-color: red;
+      }
+    }
+    .navMobile{display: flex;}
+    .home{
+      width: 100%;
+      height: 100%;
+      display: block;
+      justify-content:flex-start;
+      flex-direction: column;
+      background-color: black;
+    }
+    .menu-mobile{
+      display: block;
+      width: 60px;
+      height: 60px;
+      padding: 20px;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    .menu{justify-content: space-between; flex-direction: column;}
+    .logoMenu{width:100%;}
+    .menu-mobile path{fill: #fff;}
+  }
+
+  @media (max-width:800px){
+    .homeCenter{h1{width:100%; padding:10px; height: 50px; margin: 0 auto; left:0; top:60%; margin-top:-100px}}
+  }
+
+  @-webkit-keyframes setaDown{
+    20%{
+      top:10px;
+    }
+  }
